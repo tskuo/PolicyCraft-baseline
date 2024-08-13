@@ -32,7 +32,7 @@ if (!getApps().length) {
 
 const vertexAI = getVertexAI(app);
 
-export const db = getFirestore(app, 'policycraft');
+export const db = getFirestore(app, 'policycraft-baseline');
 export const auth = getAuth(app);
 export const model = getGenerativeModel(vertexAI, { model: 'gemini-1.5-pro' });
 export const googleProvider = new GoogleAuthProvider();

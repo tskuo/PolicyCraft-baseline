@@ -11,7 +11,7 @@ import { defineString } from 'firebase-functions/params';
 
 initializeApp();
 const databaseName = defineString('FIRESTORE_DATABASE_NAME');
-const db = getFirestore('policycraft');
+const db = getFirestore('policycraft-baseline');
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
@@ -53,7 +53,7 @@ const db = getFirestore('policycraft');
 // 	}
 // );
 
-exports.policycraftNotificationTrigger = onDocumentCreated(
+exports.policycraftNotificationTrigger_baseline = onDocumentCreated(
 	{
 		document: 'actionLogs/{actionLogId}',
 		database: databaseName

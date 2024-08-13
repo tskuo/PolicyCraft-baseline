@@ -165,9 +165,9 @@
 				{/if}
 			</div>
 			<div class="flex text-gray-400">
-				<div class="flex mx-2 items-center">
+				<!-- <div class="flex mx-2 items-center">
 					<Folder class="w-4 h-4 mr-2" />{cases.length}
-				</div>
+				</div> -->
 				<div class="flex mx-2 items-center">
 					<MessageSquare class="w-4 h-4 mr-2" />{openDiscussions.length}
 				</div>
@@ -176,21 +176,8 @@
 	</div>
 	{#if compactView === false}
 		<Card.Content>
-			<h3 class="font-bold mb-2">Related Cases</h3>
+			<!-- <h3 class="font-bold mb-2">Related Cases</h3>
 			{#if cases.length > 0}
-				<!-- <div class="flex justify-center w-full">
-					<Carousel.Root opts={{ align: 'start' }} class="w-11/12">
-						<Carousel.Content>
-							{#each cases as c}
-								<Carousel.Item class="md:basis-1/2 lg:basis-1/3">
-									<CaseCard {...c} {userId} {userCounts}></CaseCard>
-								</Carousel.Item>
-							{/each}
-						</Carousel.Content>
-						<Carousel.Previous />
-						<Carousel.Next />
-					</Carousel.Root>
-				</div> -->
 				<ScrollArea orientation="horizontal" class="rounded-lg md:w-[57vw]">
 					<div class="flex space-x-2 pb-4 w-[57vw]">
 						{#each cases as c}
@@ -202,7 +189,7 @@
 				</ScrollArea>
 			{:else}
 				<p class="text-sm">There are no related cases.</p>
-			{/if}
+			{/if} -->
 			<h3 class="font-bold mt-4 mb-2">Open discussions</h3>
 			<Table.Root>
 				<Table.Body>

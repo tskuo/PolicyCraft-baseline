@@ -17,6 +17,11 @@
 		Pencil,
 		TriangleAlert
 	} from 'lucide-svelte/icons';
+	import { onMount } from 'svelte';
+	import { invalidateAll } from '$app/navigation';
+	onMount(() => {
+		invalidateAll();
+	});
 
 	export let data;
 
@@ -245,7 +250,7 @@
 			/>
 		{/if}
 
-		<div class="flex justify-between items-center mt-6">
+		<!-- <div class="flex justify-between items-center mt-6">
 			<h3 class="font-bold text-lg">Related Cases</h3>
 			<div class="flex">
 				{#if data.stage !== 'vote'}
@@ -267,7 +272,7 @@
 				edit case button. Note that policies without any related cases will not be eligible for
 				voting in the final stage.
 			</p>
-		{/if}
+		{/if} -->
 	</div>
 	<div class="md:col-span-1 p-2">
 		<DiscussionPanel

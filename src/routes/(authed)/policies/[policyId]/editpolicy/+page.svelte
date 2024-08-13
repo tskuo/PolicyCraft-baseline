@@ -31,11 +31,11 @@
 			userCounts={data.userCounts}
 		/>
 	</div>
-	<div class="md:col-span-1 p-2">
+	<!-- <div class="md:col-span-1 p-2">
 		<PolicyEditAIPanel
 			cases={data.cases}
 			policyDescription={data.policy.description}
 			policyId={data.policy.id}
 		/>
-	</div>
+	</div> -->
 </div>

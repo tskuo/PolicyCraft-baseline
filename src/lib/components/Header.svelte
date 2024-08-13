@@ -43,12 +43,12 @@
 											<span class="ml-2">Policy Repository</span>
 										</a>
 									</li>
-									<li>
+									<!-- <li>
 										<a href="/cases" class="p-2 flex items-center hover:bg-sky-100 rounded">
 											<Folders class="w-4 h-4" />
 											<span class="ml-2">Case Repository</span>
 										</a>
-									</li>
+									</li> -->
 								</ui>
 							</nav>
 						</Sheet.Description>

@@ -16,11 +16,11 @@
 				<span class="ml-2 hidden md:inline">Policy Repository</span>
 			</a>
 		</li>
-		<li>
+		<!-- <li>
 			<a href="/cases" class="p-2 flex items-center hover:bg-sky-100 rounded">
 				<Folders class="w-5 h-5" />
 				<span class="ml-2 hidden md:inline">Case Repository</span>
 			</a>
-		</li>
+		</li> -->
 	</ui>
 </nav>

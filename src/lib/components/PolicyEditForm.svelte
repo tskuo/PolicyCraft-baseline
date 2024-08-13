@@ -76,7 +76,7 @@
 </script>
 
 <form method="POST" use:enhance action="?/editPolicy">
-	<h2 class="font-bold mt-4 mb-2">Step 1 of 2: Edit policy title and description</h2>
+	<!-- <h2 class="font-bold mt-4 mb-2">Step 1 of 2: Edit policy title and description</h2> -->
 	<Form.Field {form} name="title">
 		<Form.Control let:attrs>
 			<Form.Label>Title</Form.Label>
@@ -240,7 +240,7 @@
 		</div>
 		<Form.FieldErrors />
 	</Form.Field>
-	{#if !showNextStep}
+	<!-- {#if !showNextStep}
 		<h3 class="text-sm font-medium my-3">
 			Related Cases
 			<span class="text-muted-foreground">(for reference only, not editable here)</span>
@@ -276,11 +276,10 @@
 			}}
 			>Next step
 		</Button>
-	{/if}
-	{#if $formData.cases.length !== 0 && showNextStep}
+	{/if} -->
+	<!-- {#if $formData.cases.length !== 0 && showNextStep}
 		<h2 class="font-bold mt-4">Step 2 of 2: Check related case labels before submission</h2>
 		<Form.Fieldset {form} name="cases" class="mt-4">
-			<!-- <Form.Legend>Step 2 of 2: Review related case labels</Form.Legend> -->
 			<Form.Description class="mb-4">
 				Please check the labels of related cases to see if your policy edit will result in any
 				labels that need to be updated (e.g., a case that was previously disallowed by the policy is
@@ -345,14 +344,14 @@
 				</Carousel.Root>
 			</div>
 		</Form.Fieldset>
-	{/if}
-	{#if $formData.cases.length == 0 && showNextStep}
+	{/if} -->
+	<!-- {#if $formData.cases.length == 0 && showNextStep}
 		<h2 class="font-bold mt-4">Step 2 of 2: Check related case labels before submission</h2>
 		<p class="text-sm mt-2">
 			This policy currently has no related cases. Please directly submit the edit and consider
 			adding related cases.
 		</p>
-	{/if}
+	{/if} -->
 	{#if $message}
 		<Alert.Root class="my-4 border-primary text-primary">
 			<CircleAlert class="h-4 w-4 stroke-primary" />
@@ -367,17 +366,17 @@
 			</Alert.Description>
 		</Alert.Root>
 	{/if}
-	{#if showNextStep}
-		<Form.Button
-			class="mt-6"
-			disabled={!allowSubmit ||
-				disalbeSubmitButton ||
-				($formData.survey.some((s) => s.startsWith('other')) && otherOption == '')}
-		>
-			{#if disalbeSubmitButton}
-				<LoaderCircle class="w-4 h-4 mr-2 animate-spin" />
-			{/if}
-			Submit
-		</Form.Button>
-	{/if}
+	<!-- {#if showNextStep} -->
+	<Form.Button
+		class="mt-6"
+		disabled={!allowSubmit ||
+			disalbeSubmitButton ||
+			($formData.survey.some((s) => s.startsWith('other')) && otherOption == '')}
+	>
+		{#if disalbeSubmitButton}
+			<LoaderCircle class="w-4 h-4 mr-2 animate-spin" />
+		{/if}
+		Submit
+	</Form.Button>
+	<!-- {/if} -->
 </form>
