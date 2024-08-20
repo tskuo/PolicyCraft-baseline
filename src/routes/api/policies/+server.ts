@@ -11,9 +11,9 @@ export const GET = async ({ locals }) => {
 		const res: any[] = [];
 		querySnapshot.forEach((doc) => {
 			const policy = { id: doc.id, ...doc.data() };
-			if (locals.stage !== 'vote' || (locals.stage == 'vote' && doc.data().cases.length > 0)) {
-				res.push(policy);
-			}
+			// if (locals.stage !== 'vote' || (locals.stage == 'vote' && doc.data().cases.length > 0)) {
+			res.push(policy);
+			// }
 		});
 		return json(res);
 	} catch {
